@@ -12,6 +12,7 @@ const selections = [
         beats: "paper"
     }
 ]
+
 const yourChoice = selections[window.prompt("What is your choice?")]
 console.log(yourChoice);
 
