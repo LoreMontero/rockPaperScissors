@@ -12,11 +12,12 @@ const selections = [
         beats: "paper"
     }
 ]
+const yourChoice = selections[window.prompt("What is your choice?")]
 
-const computerChoice = () => {
+const randomizer = () => {
     const randomSelection = Math.floor(Math.random() * selections.length)
     return selections[randomSelection];
 }
+const computerChoice = randomizer();
 
-const computerSelection = computerChoice();
-console.log(computerSelection);
+function 
