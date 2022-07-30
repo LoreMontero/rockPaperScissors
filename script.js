@@ -13,11 +13,15 @@ const selections = [
     }
 ]
 const yourChoice = selections[window.prompt("What is your choice?")]
+console.log(yourChoice);
 
 const randomizer = () => {
     const randomSelection = Math.floor(Math.random() * selections.length)
     return selections[randomSelection];
 }
 const computerChoice = randomizer();
+console.log(computerChoice);
 
-function 
+// for (let rounds = 1; rounds === 5; rounds++) {
+//     console.log(rounds);
+// }
