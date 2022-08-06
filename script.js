@@ -13,7 +13,7 @@ const selections = [
     }
 ]
 
-const yourChoice = selections[window.prompt("What is your choice?")]
+const yourChoice = selections[]
 console.log(yourChoice);
 
 const randomizer = () => {
