@@ -1,0 +1,17 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+.score {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h3 {
+    background-color: rgb(36, 127, 207);
+    color: white;
+    padding: 12px;
+    margin: 20px;
+    border-radius: 15px;
+}
