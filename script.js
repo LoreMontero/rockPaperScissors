@@ -31,8 +31,15 @@ selectionButtons.forEach(selectionButton => {
     })
 })
 
-const winner = (selection, comp) => {
-    return selection.beats === computerChoice.name
+const winner = (selection, compSelection) => {
+    return selection.beats === compSelection.name
+}
+
+const result = (selection, winner) => {
+    const div = document.createElement('div')
+    div.innerText(selection.emoji)
+    div.classList.add('result-selection')
+    resultColumn.after(div)
 }
 
 const randomizer = () => {
