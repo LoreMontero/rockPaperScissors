@@ -1,14 +1,17 @@
 const selections = [
     {
         name: "rock",
+        emoji: "✊", 
         beats: "scissors"
     },
     {
         name: "paper",
+        emoji: "🖐",
         beats: "rock"
     },
     {
         name: "scissors",
+        emoji: "✌️",
         beats: "paper"
     }
 ]
@@ -35,3 +38,5 @@ console.log(computerChoice);
 // for (let rounds = 1; rounds === 5; rounds++) {
 //     console.log(rounds);
 // }
+
+if 
