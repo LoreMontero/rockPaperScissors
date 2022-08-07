@@ -1,6 +1,8 @@
 function makeSelection(selection) {
     console.log(selection)
-    console.log()
+    const youWin = winner(selection, computerChoice)
+    const computerWins = winner(computerChoice, selection)
+    console.log(computerChoice.name)
 }
 
 const selectionButtons = document.querySelectorAll('[data-selection]')
@@ -29,13 +31,15 @@ selectionButtons.forEach(selectionButton => {
     })
 })
 
+const winner = (selection, comp) => {
+    return selection.beats === computerChoice.name
+}
 
 const randomizer = () => {
     const randomSelection = Math.floor(Math.random() * selections.length)
     return selections[randomSelection];
 }
 const computerChoice = randomizer();
-console.log(computerChoice);
 
 
 // for (let rounds = 1; rounds === 5; rounds++) {
