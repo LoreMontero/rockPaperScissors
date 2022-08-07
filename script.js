@@ -1,3 +1,9 @@
+function makeSelection(selection) {
+    console.log(selection)
+    console.log()
+}
+
+const selectionButtons = document.querySelectorAll('[data-selection]')
 const selections = [
     {
         name: "rock",
@@ -16,17 +22,13 @@ const selections = [
     }
 ]
 
-let score = 0
-
-const buttons = document.querySelectorAll('[data-selection]')
-buttons.forEach(buttons => {
-    buttons.addEventListener('click', e => {
-        const selectionName = buttons.dataset.selection
+selectionButtons.forEach(selectionButton => {
+    selectionButton.addEventListener('click', e => {
+        const selectionName = selectionButton.dataset.selection
+        makeSelection(selectionName)
     })
 })
 
-const yourChoice = selections[]
-console.log(yourChoice);
 
 const randomizer = () => {
     const randomSelection = Math.floor(Math.random() * selections.length)
@@ -35,8 +37,7 @@ const randomizer = () => {
 const computerChoice = randomizer();
 console.log(computerChoice);
 
+
 // for (let rounds = 1; rounds === 5; rounds++) {
 //     console.log(rounds);
 // }
-
-if 

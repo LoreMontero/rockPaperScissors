@@ -12,6 +12,7 @@ h1 {
 .emoji {
     display: flex;
     justify-content: center;
+    margin: 0px 20px 0px 20px;
 }
 
 button {
