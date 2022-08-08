@@ -31,8 +31,8 @@ function makeSelection(selection) {
 selectionButtons.forEach(selectionButton => {
     selectionButton.addEventListener('click', e => {
         const selectionName = selectionButton.dataset.selection
-        const selection = selections.find(selection.name === selectionName)
-        makeSelection(selectionName)
+        const selection = selections.find(selection => selection.name === selectionName)
+        makeSelection(selection)
     })
 })
 
@@ -40,11 +40,11 @@ const winner = (selection, compSelection) => {
     return selection.beats === compSelection.name
 }
 
-const result = (selection, winner) => {
+const result = (selection, champGoesHere) => {
     const div = document.createElement('div')
     div.innerText = selection.emoji
     div.classList.add('result-selection')
-    if (winner) div.classList.add('Winner')
+    if (champGoesHere) div.classList.add('Winner')
     resultColumn.after(div)
 }
 
