@@ -1,14 +1,3 @@
-function makeSelection(selection) {
-    console.log(selection)
-    console.log(computerChoice.name)
-    const youWin = winner(selection, computerChoice)
-    const computerWins = winner(computerChoice, selection)
-    
-
-    result(computerChoice, computerWins)
-    result(selection, youWin)
-}
-
 const selectionButtons = document.querySelectorAll('[data-selection]')
 const resultColumn = document.querySelector('[data-result-column]')
 const selections = [
@@ -29,10 +18,20 @@ const selections = [
     }
 ]
 
+function makeSelection(selection) {
+    console.log(selection)
+    console.log(computerChoice)
+    const youWin = winner(selection, computerChoice)
+    const computerWins = winner(computerChoice, selection)
+    
+    result(computerChoice, computerWins)
+    result(selection, youWin)
+}
+
 selectionButtons.forEach(selectionButton => {
     selectionButton.addEventListener('click', e => {
         const selectionName = selectionButton.dataset.selection
-        const selection = selections.find(selection =selection.name === selectionName)
+        const selection = selections.find(selection.name === selectionName)
         makeSelection(selectionName)
     })
 })
