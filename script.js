@@ -44,7 +44,7 @@ const result = (selection, champGoesHere) => {
     const div = document.createElement('div')
     div.innerText = selection.emoji
     div.classList.add('result-selection')
-    if (champGoesHere) div.classList.add('Winner')
+    if (champGoesHere) div.classList.add('winner')
     resultColumn.after(div)
 }
 
