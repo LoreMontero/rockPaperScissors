@@ -18,24 +18,6 @@ const selections = [
     }
 ]
 
-function makeSelection(selection) {
-    console.log(selection)
-    console.log(computerChoice)
-    const youWin = winner(selection, computerChoice)
-    const computerWins = winner(computerChoice, selection)
-    
-    result(computerChoice, computerWins)
-    result(selection, youWin)
-}
-
-selectionButtons.forEach(selectionButton => {
-    selectionButton.addEventListener('click', e => {
-        const selectionName = selectionButton.dataset.selection
-        const selection = selections.find(selection => selection.name === selectionName)
-        makeSelection(selection)
-    })
-})
-
 const winner = (selection, compSelection) => {
     return selection.beats === compSelection.name
 }
@@ -54,6 +36,24 @@ const randomizer = () => {
 }
 const computerChoice = randomizer();
 
+
+function makeSelection(selection) {
+    console.log(selection)
+    console.log(computerChoice)
+    const youWin = winner(selection, computerChoice)
+    const computerWins = winner(computerChoice, selection)
+    
+    result(computerChoice, computerWins)
+    result(selection, youWin)
+}
+
+selectionButtons.forEach(selectionButton => {
+    selectionButton.addEventListener('click', e => {
+        const selectionName = selectionButton.dataset.selection
+        const selection = selections.find(selection => selection.name === selectionName)
+        makeSelection(selection)
+    })
+})
 
 // for (let rounds = 1; rounds === 5; rounds++) {
 //     console.log(rounds);
