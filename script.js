@@ -34,18 +34,20 @@ const randomizer = () => {
     const randomSelection = Math.floor(Math.random() * selections.length)
     return selections[randomSelection];
 }
-const computerChoice = randomizer();
+
 
 
 function makeSelection(selection) {
+    const computerChoice = randomizer();
     console.log(selection)
     console.log(computerChoice)
     const youWin = winner(selection, computerChoice)
     const computerWins = winner(computerChoice, selection)
-    
+        
     result(computerChoice, computerWins)
     result(selection, youWin)
 }
+
 
 selectionButtons.forEach(selectionButton => {
     selectionButton.addEventListener('click', e => {
@@ -54,6 +56,7 @@ selectionButtons.forEach(selectionButton => {
         makeSelection(selection)
     })
 })
+
 
 // for (let rounds = 1; rounds === 5; rounds++) {
 //     console.log(rounds);
