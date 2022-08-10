@@ -1,5 +1,7 @@
 const selectionButtons = document.querySelectorAll('[data-selection]')
 const resultColumn = document.querySelector('[data-result-column]')
+const yourScore = document.querySelector('[data-your-score]')
+const computerScore = document.querySelector('[data-computer-score]')
 const selections = [
     {
         name: "rock",
@@ -35,7 +37,9 @@ const randomizer = () => {
     return selections[randomSelection];
 }
 
-
+function incrementScore(scores) {
+    scores.innerText = parseInt(scores.innerText) + 1
+}
 
 function makeSelection(selection) {
     const computerChoice = randomizer();
@@ -43,9 +47,12 @@ function makeSelection(selection) {
     console.log(computerChoice)
     const youWin = winner(selection, computerChoice)
     const computerWins = winner(computerChoice, selection)
-        
+    
     result(computerChoice, computerWins)
     result(selection, youWin)
+
+    if (youWin) incrementScore(yourScore)
+    if (computerWins) incrementScore(computerScore)
 }
 
 
