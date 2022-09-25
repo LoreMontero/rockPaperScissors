@@ -15,12 +15,16 @@
         <button class="selection" data-selection="scissors">✌️</button>
     </div>
     <div class="score" data-result-column>
-        <h3>You: 
-            <span class="result-score" data-your-score>0</span>
-        </h3>
-        <h3>Computer: 
-            <span class="result-score" data-computer-score>0</span>
-        </h3>
+        <div class="yourScore">
+            <h3 id="yourScoreTitle">You: 
+                <span class="result-score" data-your-score>0</span>
+            </h3>
+        </div>
+        <div class="compScore">
+            <h3 id="compScoreTitle">Computer: 
+                <span class="result-score" data-computer-score>0</span>
+            </h3>
+        </div>    
     </div>
     <script src="./script.js"></script>
 </body>
