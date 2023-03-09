@@ -23,7 +23,7 @@ const selections = [
 ]
 
 const winner = (selection, compSelection) => {
-    return selection.beats === compSelection.name
+    return selection.beats === compSelection.name;
 }
 
 const yourResult = (selection, winner) => {
@@ -71,9 +71,4 @@ selectionButtons.forEach(selectionButton => {
         const selection = selections.find(selection => selection.name === selectionName)
         makeSelection(selection)
     })
-})
-
-
-// for (let rounds = 1; rounds === 5; rounds++) {
-//     console.log(rounds);
-// }
+});
