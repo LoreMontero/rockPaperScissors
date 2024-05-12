@@ -53,16 +53,16 @@ function incrementScore(scores) {
 
 function makeSelection(selection) {
     const computerChoice = randomizer();
-    console.log(selection)
-    console.log(computerChoice)
-    const youWin = winner(selection, computerChoice)
-    const computerWins = winner(computerChoice, selection)
+    console.log(selection);
+    console.log(computerChoice);
+    const youWin = winner(selection, computerChoice);
+    const computerWins = winner(computerChoice, selection);
     
-    compResult(computerChoice, computerWins)
-    yourResult(selection, youWin)
+    compResult(computerChoice, computerWins);
+    yourResult(selection, youWin);
 
-    if (youWin) incrementScore(yourScore)
-    if (computerWins) incrementScore(computerScore)
+    if (youWin) incrementScore(yourScore);
+    if (computerWins) incrementScore(computerScore);
 }
 
 selectionButtons.forEach(selectionButton => {
